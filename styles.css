@@ -1,0 +1,29 @@
+body{
+    margin: 50px;
+    background-color: indianred;
+}
+
+.timer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: turquoise;
+   text-transform: uppercase;
+}
+
+.field {
+    
+    flex-basis: 200;
+    font-size: 23px;
+    font-weight: 400;
+    margin-right: 30px;
+}
+
+.birthday{
+    margin-bottom: 30px;
+    text-align: center;
+}
