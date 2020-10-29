@@ -3,6 +3,15 @@ body{
     background-color: indianred;
 }
 
+.date {
+    text-align: center;
+    font-weight: 700;
+    font-size: 70px;
+    margin-top: 100px;
+    color: seashell;
+
+}
+
 .timer {
     position: absolute;
     left: 50%;
@@ -13,17 +22,18 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     color: turquoise;
    text-transform: uppercase;
+   width: 1000px;
 }
 
 .field {
     
     flex-basis: 200;
-    font-size: 23px;
+    font-size: 40px;
     font-weight: 400;
     margin-right: 30px;
 }
 
-.birthday{
-    margin-bottom: 30px;
-    text-align: center;
+
+.value {
+    color: teal;
 }
