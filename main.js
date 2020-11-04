@@ -1,10 +1,4 @@
-const refs = {
-    days: document.querySelector('.value[data-value="days"]'),
-    hours: document.querySelector('.value[data-value="hours"]'),
-    mins: document.querySelector('.value[data-value="mins"]'),
-    secs: document.querySelector('.value[data-value="secs"]'),
-    timerFace: document.getElementById("timer-1"),
-};
+
 
 class CountdownTimer {
     constructor({ selector, targetDate }) {
@@ -26,6 +20,16 @@ class CountdownTimer {
         );
         const mins = this.pad(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
         const secs = this.pad(Math.floor((time % (1000 * 60)) / 1000));
+        let div = document.querySelector(`${this.selector}`)
+
+        const refs = {
+            days: div.querySelector('.value[data-value="days"]'),
+            hours: div.querySelector('.value[data-value="hours"]'),
+            mins: div.querySelector('.value[data-value="mins"]'),
+            secs: div.querySelector('.value[data-value="secs"]'),
+
+        };
+
         refs.days.textContent = `${days}`;
         refs.hours.textContent = `${hours}`;
         refs.mins.textContent = `${mins}`;
@@ -47,4 +51,8 @@ new CountdownTimer({
     targetDate: new Date("December 19, 2020"),
 });
 
+new CountdownTimer({
+    selector: "#timer-2",
+    targetDate: new Date("December 31, 2020"),
+});
 
